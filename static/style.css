@@ -95,11 +95,11 @@ h1, h2, h3 { font-family: var(--font-title); font-weight: 700; }
     padding: 20x 0; 
     background: var(--text-border); 
     border-top: 1px solid var(--border); 
-    border-bottom: 5px solid var(--border); 
+    border-bottom: 1px solid var(--border); 
     overflow: hidden; 
     align-items: center;
 }
-.section-label { text-align: center; font-size: 0.75rem; color: var(--text-dim); letter-spacing: 2px; margin-bottom: 50px; font-weight: 600; }
+.section-label { text-align: center; font-size: 0.75rem; color: var(--text-dim); letter-spacing: 2px; margin-bottom: 15px; font-weight: 600; }
 
 .marquee-wrapper { 
     display: flex; 
@@ -133,7 +133,7 @@ h1, h2, h3 { font-family: var(--font-title); font-weight: 700; }
 
 .partner-item { display: flex; align-items: center; flex-shrink: 0; }
 .partner-logo { 
-    height: 80px; width: auto; 
+    height: 100px; width: auto; 
     filter: none; opacity: 0.8; 
     transition: 0.3s; 
     display: block;
