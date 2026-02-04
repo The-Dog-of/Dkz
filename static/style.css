@@ -94,8 +94,7 @@ h1, h2, h3 { font-family: var(--font-title); font-weight: 700; }
 .partners-section { 
     padding: 20x 0; 
     background: var(--text-border); 
-    border-top: 1px solid var(--border); 
-    border-bottom: 1px solid var(--border); 
+
     overflow: hidden; 
     align-items: center;
 }
@@ -133,7 +132,7 @@ h1, h2, h3 { font-family: var(--font-title); font-weight: 700; }
 
 .partner-item { display: flex; align-items: center; flex-shrink: 0; }
 .partner-logo { 
-    height: 100px; width: auto; 
+    height: 90px; width: auto; 
     filter: none; opacity: 0.8; 
     transition: 0.3s; 
     display: block;
@@ -196,7 +195,7 @@ h1, h2, h3 { font-family: var(--font-title); font-weight: 700; }
 .modal-overlay {
     position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 10000;
     display: flex; justify-content: center; align-items: center; padding: 20px;
-    opacity: 0; pointer-events: none; transition: all 0.2s ease;
+    opacity: 0; pointer-events: none; transition: all 0.8s ease;
 }
 .modal-overlay.active { opacity: 1; pointer-events: auto; }
 .modal-backdrop { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); backdrop-filter: blur(8px); }
@@ -211,6 +210,8 @@ h1, h2, h3 { font-family: var(--font-title); font-weight: 700; }
 .modal-header h3 { font-size: 2rem; margin-bottom: 20px; color: #fff; }
 .modal-body p { font-size: 1.1rem; color: #ccc; line-height: 1.6; }
 
+.outline-text2 { color: transparent; -webkit-text-stroke: 1px var(--text); }
+.cta-title2 { font-size: clamp(1rem, 7vw, 3rem); line-height: 1; margin-bottom: 50px; }
 .cta-box { padding: 100px 0; text-align: center; border-top: 1px solid var(--border); }
 .cta-title { font-size: clamp(3rem, 8vw, 6rem); line-height: 1; margin-bottom: 50px; }
 .outline-text { color: transparent; -webkit-text-stroke: 1px var(--text); }
@@ -237,7 +238,7 @@ h1, h2, h3 { font-family: var(--font-title); font-weight: 700; }
     
     /* Ajuste Marquee Mobile */
     .marquee-group { gap: 40px; padding-right: 40px; }
-    .partner-logo { height: 28px; }
+    .partner-logo { height: 90px; }
     
     .contact-links { flex-direction: column; gap: 20px; }
     .cta-box { padding: 60px 0; }
