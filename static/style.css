@@ -113,7 +113,7 @@ h1, h2, h3 { font-family: var(--font-title); font-weight: 700; }
     display: flex; 
     width: max-content; 
     gap: 0; 
-    animation: scroll 60s linear infinite; 
+    animation: scroll 30s linear infinite; 
     will-change: transform; 
 }
 
@@ -219,7 +219,7 @@ h1, h2, h3 { font-family: var(--font-title); font-weight: 700; }
 .contact-link { font-size: 1.2rem; font-weight: 700; color: var(--text); text-decoration: none; position: relative; }
 .contact-link::after { content: ''; position: absolute; bottom: -5px; left: 0; width: 0%; height: 2px; background: var(--text); transition: width 0.3s; }
 .contact-link:hover::after { width: 100%; }
-.footer-legal { font-size: 0.8rem; color: var(--text-dim); }
+.footer-legal { font-size: 0.8rem; color: var(--text-dim); align-items: center; display: flex; justify-content: center; }
 
 @media (max-width: 900px) {
     .hero-layout { grid-template-columns: 1fr; gap: 40px; text-align: center; }
@@ -236,11 +236,9 @@ h1, h2, h3 { font-family: var(--font-title); font-weight: 700; }
     .navbar { padding: 20px; }
     .skills-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 15px; }
     
-    /* Ajuste Marquee Mobile */
     .marquee-group { gap: 40px; padding-right: 40px; }
     .partner-logo { height: 90px; }
     
-    .contact-links { flex-direction: column; gap: 20px; }
     .cta-box { padding: 60px 0; }
 }
 
