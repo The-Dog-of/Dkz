@@ -120,8 +120,8 @@ h1, h2, h3 { font-family: var(--font-title); font-weight: 700; }
 .marquee-group { 
     display: flex; 
     align-items: center; 
-    gap: 80px; 
-    padding-right: 80px; 
+    gap: 200px; 
+    padding-right: 200px; 
     flex-shrink: 0;
 }
 
@@ -353,6 +353,7 @@ h1, h2, h3 { font-family: var(--font-title); font-weight: 700; }
     opacity: 1;
     transform: translateY(0);
 }
+
 
 
 
