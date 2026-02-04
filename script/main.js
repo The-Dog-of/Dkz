@@ -73,11 +73,14 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.reveal-up, .reveal-down, .reveal-left').forEach(el => observer.observe(el));
     }
 
+    
     const skillCards = document.querySelectorAll('.skill-card');
     const modal = document.getElementById('skillModal');
     const modalTitle = document.getElementById('modalTitle');
     const modalDesc = document.getElementById('modalDesc');
     const modalClose = document.querySelector('.modal-close');
+
+    let typingInterval;
 
     skillCards.forEach(card => {
         card.addEventListener('click', () => {
@@ -85,13 +88,33 @@ document.addEventListener('DOMContentLoaded', () => {
             const desc = card.getAttribute('data-desc');
             
             modalTitle.innerText = title;
-            modalDesc.innerText = desc;
-            
+
+            modalDesc.innerHTML = ''; 
+            modalDesc.classList.remove('typing-done'); 
+            modalDesc.classList.add('typing-effect'); 
+            if (typingInterval) clearInterval(typingInterval);
+
             modal.classList.add('active');
+
+            let i = 0;
+            const speed = 40;
+
+            typingInterval = setInterval(() => {
+                modalDesc.textContent += desc.charAt(i);
+                i++;
+
+                if (i > desc.length - 1) {
+                    clearInterval(typingInterval);
+                }
+            }, speed);
         });
     });
 
-    const closeModal = () => modal.classList.remove('active');
+    const closeModal = () => {
+        modal.classList.remove('active');
+        if (typingInterval) clearInterval(typingInterval);
+        modalDesc.innerHTML = ''; 
+    };
     
     if(modalClose) modalClose.addEventListener('click', closeModal);
     
