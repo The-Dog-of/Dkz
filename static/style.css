@@ -257,7 +257,7 @@ h1, h2, h3 { font-family: var(--font-title); font-weight: 700; }
 .games-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 24px;
+    gap: 40px;
 }
 
 .game-card {
@@ -353,6 +353,7 @@ h1, h2, h3 { font-family: var(--font-title); font-weight: 700; }
     opacity: 1;
     transform: translateY(0);
 }
+
 
 
 
